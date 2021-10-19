@@ -1,4 +1,4 @@
-name: "UdaConnect Location Event Producer Service - Package with Docker"
+name: "UdaConnect Person Service - Package with Docker"
 
 on:
   schedule:
@@ -35,8 +35,8 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: ./modules/locEventProducerService
-          file: ./modules/locEventProducerService/Dockerfile
+          context: ./modules/api
+          file: ./modules/api/Dockerfile
           platforms: linux/amd64
           push: ${{ github.event_name != 'pull_request' }}
-          tags: zub1984/loc-event-producer-service-api:latest
+          tags: zub1984/nd064-udaconnect-api:latest

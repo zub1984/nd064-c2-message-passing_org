@@ -37,4 +37,4 @@ jobs:
           file: ./modules/frontend/Dockerfile
           platforms: linux/amd64
           push: ${{ github.event_name != 'pull_request' }}
-          tags: zub1984/udaconnect-app:latest
+          tags: zub1984/nd064-udaconnect-app:latest
